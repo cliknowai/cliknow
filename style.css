@@ -13,13 +13,13 @@
   }
   
   .hero-wrapper {
-    background-image: url('media/Fotos e imagenes/fondo5.jpg');
+    background-image: url('media/Fotos e imagenes/fondo1.jpg');
     background-size: cover;
     background-position: center right; /* o top right */
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    padding: 40px 0 80px;
+    padding: 40px 0 0px;
   }
   
   
@@ -29,11 +29,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
   }
   
   .navbar .logo {
-    width: 140px;
+    width: 200px;
   }
   
   .nav-links {
@@ -54,7 +54,7 @@
   
   /* Sección principal del hero */
   .hero-content {
-    padding: 60px 12vw;
+    padding: 0px 12vw;
     display: flex;
     align-items: center;
     position: relative;
@@ -94,6 +94,17 @@
     text-decoration: none;
     font-weight: 600;
     transition: transform 0.2s;
+    text-align: center;
+  }
+
+  .cta-button-basic {
+    display: inline-block;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
   }
   
   .cta-button:hover {
@@ -120,6 +131,20 @@
   .image-container img {
     width: 100%;
     max-width: 300px;
+    height: auto;
+  }
+
+  .image-container-top {
+    flex: 1 1 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-container-top img {
+    width: 100%;
+    max-width: 800px;
+    min-width: 400px;
     height: auto;
   }
   
@@ -557,11 +582,11 @@
   }
   
   .closing-logo img {
-    max-width: 160px;
+    max-width: 200px;
   }
   
 /* Media Querys para la version web */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   /* Navbar */
   .navbar {
     flex-direction: column;
@@ -579,7 +604,7 @@
   /* Hero */
   .hero-content {
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 0px 20px;
     text-align: center;
   }
 
@@ -717,9 +742,9 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .hero-wrapper {
-    background-image: url('media/Fotos e imagenes/fondo5.jpg');
+    background-image: url('media/Fotos e imagenes/fondo1.jpg');
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -773,8 +798,119 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: px) {
   .step-numbers {
     display: none;
+  }
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.logo {
+  width: 200px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* Ocultar el ícono en pantallas grandes */
+.icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar.show .nav-links {
+    display: flex;
+  }
+
+  .icon {
+    display: block;
+  }
+}
+
+/* Menú lateral */
+.side-menu {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: white;
+  transition: 0.3s;
+  z-index: 1100;
+  padding-top: 60px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.side-menu a {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #eee;
+}
+
+.side-menu a:hover {
+  background-color: #f4f4f4;
+}
+
+.side-menu .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1000px) {
+  .nav-links {
+    display: none; /* Oculta los enlaces en móvil */
+  }
+
+  .icon {
+    display: block; /* Muestra ícono hamburguesa */
+  }
+
+  .side-menu.open {
+    left: 0;
   }
 }

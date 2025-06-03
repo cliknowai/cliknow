@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="script.js"></script>
 </head>
 <body>
@@ -14,25 +15,46 @@
     <!-- Sección principal -->
 <div class="hero-wrapper">
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <img src="media/Logo/Logo_Blanco.png" alt="CLIKNOW Logo" class="logo">
-      <ul class="nav-links">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  
-    <!-- Contenido del Hero -->
-    <div class="hero-content">
-      <div class="text-content">
-        <h1>¡Nunca más vuelvas a perder un cliente!</h1>
-        <p class="subheading">Tu tiempo vale demasiado para seguir prospectos.</p>
-        <p class="description">Nuestra IA personalizada, <strong>captura, califica y convierte</strong> clientes automáticamente 24/7, para que solo te enfoques en hacer crecer tu negocio.</p>
-        <a href="#" class="cta-button">🔥 Agenda una demostración y comprueba cómo podemos ayudarte 🔥</a>
-      </div>
+  <!-- Navbar -->
+  <div class="topnav">
+    <img src="media/Logo/logo.png" alt="CLIKNOW Logo" class="logo">
+    <!-- Ícono hamburguesa solo en móvil -->
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <div class="navbar nav-links" id="myLinks">
+      <!-- <ul class="nav-links"> -->
+        <li><a class="cta-button-basic" href="#servicios">Servicios</a></li>
+        <li><a class="cta-button-basic" href="#proyectos">Proyectos</a></li>
+        <li><a class="cta-button" href="#contacto">Contacto</a></li>
+      <!-- </ul> -->
     </div>
+    
+  </div>
+
+  <!-- Menú lateral para móviles -->
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+    <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+    <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
+    <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+  </div>
+
+  <!-- Fondo oscuro -->
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Contenido del Hero -->
+  <div class="hero-content">
+    <div class="text-content">
+      <h1>¡Nunca más vuelvas a perder un cliente!</h1>
+      <p class="subheading">Tu tiempo vale demasiado para seguir prospectos.</p>
+      <p class="description">Nuestra IA personalizada, <strong>captura, califica y convierte</strong> clientes automáticamente 24/7, para que solo te enfoques en hacer crecer tu negocio.</p>
+      <a href="#" class="cta-button">🔥 Agenda una demostración y comprueba cómo podemos ayudarte 🔥</a>
+    </div>
+    <div class="image-container-top">
+      <img src="media/Fotos e imagenes/persona.png">
+    </div>
+  </div>
   
   </div>
   
@@ -115,17 +137,17 @@
         <!-- Bloque 3: Tres columnas de contenido -->
         <div class="steps-grid">
           <div class="step">
-            <img src="media/Iconos y Emojis/Icon_03.png" alt="Icono IA">
+            <img src="media/Iconos y Emojis/icon-ia.png" alt="Icono IA">
             <h3>Conecta con nuestra IA</h3>
             <p>Llámamos o envíanos un mensaje, cuéntanos qué quieres lograr.</p>
           </div>
           <div class="step">
-            <img src="media/Iconos y Emojis/Icon_02.png" alt="Icono Diagnóstico">
+            <img src="media/Iconos y Emojis/icon-i.png" alt="Icono Diagnóstico">
             <h3>Recibe un diagnóstico personalizado</h3>
             <p>Descubre cómo exactamente nuestra IA automatizará la captación y conversión de tus prospectos.</p>
           </div>
           <div class="step">
-            <img src="media/Iconos y Emojis/Icon_01.png" alt="Icono Implementación">
+            <img src="media/Iconos y Emojis/icon-computer.png" alt="Icono Implementación">
             <h3>Implementa y domina:</h3>
             <p>Comienza a usar tu asistente virtual desde hoy y mira cómo tu negocio crece en piloto automático.</p>
           </div>
@@ -143,29 +165,10 @@
         <div class="testimonials-grid">
           <div class="testimonial">
             <div class="video-thumbnail">
-              <img src="media/Fotos e imagenes/01.png" alt="Testimonio Ricardo Gutiérrez">
-              <div class="play-icon">&#9658;</div>
+              <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/nu4emoks0q.js" async type="module"></script><style>wistia-player[media-id='nu4emoks0q']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nu4emoks0q/swatch'); display: block; filter: blur(5px); padding-top:125.0%; }</style> <wistia-player media-id="nu4emoks0q" aspect="0.8"></wistia-player>
             </div>
-            <h3>Dr. Ricardo Gutiérrez</h3>
+            <h3>Dr. César Hernández</h3>
             <p>Cliknow cambió mi vida: duplico mis consultas mientras disfruto mi tiempo libre. Nunca más un paciente sin atender.</p>
-          </div>
-      
-          <div class="testimonial">
-            <div class="video-thumbnail">
-              <img src="media/Fotos e imagenes/02.png" alt="Testimonio Laura Ramírez">
-              <div class="play-icon">&#9658;</div>
-            </div>
-            <h3>Laura Ramírez</h3>
-            <p>Antes era esclava del WhatsApp. Ahora cierro más clientes que nunca, incluso mientras duermo.</p>
-          </div>
-      
-          <div class="testimonial">
-            <div class="video-thumbnail">
-              <img src="media/Fotos e imagenes/03.png" alt="Testimonio Rodrigo Salazar">
-              <div class="play-icon">&#9658;</div>
-            </div>
-            <h3>Rodrigo Salazar</h3>
-            <p>Mis ventas subieron un 40% desde que automatizo mis prospectos con Cliknow. No imagino regresar a como estaba antes.</p>
           </div>
         </div>
       

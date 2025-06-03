@@ -20,3 +20,13 @@
   setInterval(updateCountdown, 1000);
   updateCountdown();
 
+  /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+  function hamburguerMenu() {
+    const navbar = document.getElementById("myLinks");
+    navbar.classList.toggle("show");
+  }
+
+  function toggleMenu() {
+    document.getElementById("sideMenu").classList.toggle("open");
+    document.getElementById("overlay").classList.toggle("active");
+  }
