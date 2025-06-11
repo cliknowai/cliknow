@@ -144,7 +144,7 @@
   .image-container-top img {
     width: 100%;
     max-width: 800px;
-    min-width: 400px;
+    min-width: 200px;
     height: auto;
   }
   
@@ -697,6 +697,7 @@
   .steps-grid {
     flex-direction: column;
     gap: 40px;
+    align-items: center;
   }
 
   /* Testimonials */
@@ -710,6 +711,7 @@
 
   .testimonials-grid {
     flex-direction: column;
+    align-content: center;
     gap: 30px;
   }
 
@@ -913,6 +915,11 @@
   display: block;
 }
 
+.contact-action-mobile {
+    display: None;
+}
+
+
 /* RESPONSIVE */
 @media screen and (max-width: 1000px) {
   .nav-links {
@@ -926,4 +933,22 @@
   .side-menu.open {
     left: 0;
   }
+
+  .contact-action-desktop {
+    display: None;
+  }
+
+  .contact-action-mobile {
+      display: block;
+  }
+
+  .topnav {
+    padding-left: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 25px;
+  }
+
 }
+
